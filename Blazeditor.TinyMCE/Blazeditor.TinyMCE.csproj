@@ -3,6 +3,26 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <OutputType>Library</OutputType>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Authors>Nattapong Nunpan</Authors>
+    <Description>Rich text editor for Blazor applications - Uses TinyMCE</Description>
+    <RepositoryUrl>https://github.com/aixasz/Blazeditor</RepositoryUrl>
+    <PackageTags>Blazor TinyMCE Editor Text Component</PackageTags>
+    <NeutralLanguage />
+    <PackageProjectUrl>https://github.com/aixasz/Blazeditor</PackageProjectUrl>
+    <Copyright>Copyright 2020 (c) Nattapong Nunpan. All rights reserved.</Copyright>
+    <Company>Blazeditor</Company>
+	<IsPackable>true</IsPackable>
+	<PackageLicenseExpression></PackageLicenseExpression>
+	<PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
