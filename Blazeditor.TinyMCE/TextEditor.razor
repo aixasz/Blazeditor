@@ -1,0 +1,43 @@
+﻿@inject IJSRuntime JSRuntime;
+
+@if (BlazeditorOption.InlineMode)
+{
+    <div id="@Id" class="blazeditor">@EditorContent</div>
+}
+else
+{
+    <textarea id="@Id" class="blazeditor">@EditorContent</textarea>
+}
+
+@code {
+
+    [Parameter]
+    public RenderFragment EditorContent { get; set; }
+
+
+    [Parameter]
+    public string Id { get; set; } = Guid.NewGuid().ToString();
+
+    [Parameter]
+    public BlazeditorOption BlazeditorOption { get; set; } = new BlazeditorOption();
+
+    private ElementReference EditorElement;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await Interop.InitialTinyMCE(JSRuntime, Id, BlazeditorOption);
+        }
+    }
+
+    public async Task<string> GetContent()
+    {
+        return await Interop.GetContent(JSRuntime, Id);
+    }
+
+    public async Task SetContent(string content)
+    {
+        await Interop.SetContent(JSRuntime, Id, content);
+    }
+}

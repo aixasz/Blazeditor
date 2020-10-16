@@ -1,0 +1,68 @@
+﻿@page "/"
+
+@using Blazeditor.TinyMCE
+
+
+<div>
+    <TextEditor Id="demo" @ref="@TextEditor" BlazeditorOption="textEditorOption">
+        <EditorContent>
+            This example shows you the blazor with TinyMCE.
+        </EditorContent>
+    </TextEditor>
+
+    <br />
+
+    <button @onclick="GetContent">Get content</button>
+    <br />
+    <p style="padding:50px;">
+        @((MarkupString)data)
+    </p>
+</div>
+<hr />
+<div style="padding-top:100px;">
+    <TextEditor Id="inlinedemo" @ref="@InlineTextEditor" BlazeditorOption="inlineOption">
+        <EditorContent>
+            This example shows you the blazor with inline editing of TinyMCE.
+        </EditorContent>
+    </TextEditor>
+
+    <br />
+
+    <button @onclick="GetInlineContent">Get inline content</button>
+    <br />
+    <p style="padding:50px;">
+        @((MarkupString)inlineData)
+    </p>
+</div>
+
+@code{
+
+    private TextEditor TextEditor;
+    private TextEditor InlineTextEditor;
+    private string data = string.Empty;
+    private string inlineData = string.Empty;
+
+    private BlazeditorOption textEditorOption = new BlazeditorOption
+    {
+        Toolbar = "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | outdent indent",
+        ShowMenuBar = true
+    };
+
+    private BlazeditorOption inlineOption = new BlazeditorOption
+    {
+        InlineMode = true,
+        Toolbar = "bold italic | alignleft aligncenter alignright alignjustify"
+    };
+
+    public async Task GetContent()
+    {
+        data = await TextEditor.GetContent();
+    }
+
+    public async Task GetInlineContent()
+    {
+        inlineData = await InlineTextEditor.GetContent();
+    }
+
+}
+
