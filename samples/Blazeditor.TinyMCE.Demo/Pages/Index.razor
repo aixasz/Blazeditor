@@ -13,6 +13,7 @@
     <br />
 
     <button @onclick="GetContent">Get content</button>
+    <button @onclick="ClearContent">Clear</button>
     <br />
     <p style="padding:50px;">
         @((MarkupString)data)
@@ -35,7 +36,8 @@
     </p>
 </div>
 
-@code{
+@code
+{
 
     private TextEditor TextEditor;
     private TextEditor InlineTextEditor;
@@ -63,6 +65,8 @@
     {
         inlineData = await InlineTextEditor.GetContent();
     }
+
+    public async Task ClearContent() => await TextEditor.SetContent(string.Empty);
 
 }
 
