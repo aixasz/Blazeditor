@@ -25,6 +25,13 @@ Add the following to your *_Imports.razor*
 @using Blazeditor.TinyMCE
 ```
 
+Add the following to your *_Host.cshtml*
+
+``` html
+<script src="_content/Blazeditor.TinyMCE/tinymce.min.js"></script>
+<script src="_content/Blazeditor.TinyMCE/blazeditor.js"></script>
+```
+
 ## Usage
 Please checkout the [sample projects](https://github.com/aixasz/Blazeditor/tree/main/samples) in this repo to see working examples of the features in the rich text editor component
 
