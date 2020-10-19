@@ -31,7 +31,7 @@ Please checkout the [sample projects](https://github.com/aixasz/Blazeditor/tree/
 ### Display a text editor
 
 Just use TextEditor in place of any textarea tags.
-```
+```razor
 <TextEditor Id="text-editor">
     <EditorContent>
         This example shows you the blazor with TinyMCE.
@@ -46,7 +46,7 @@ The rich text editor can be customized the toolbar and mode for variety of uses.
 For normal mode, text editor has a toolbar in the top by default. The toolbar can be customized to show the [core plugins from TinyMCE](https://www.tiny.cloud/apps/#core-plugins) using the `BlazeditorOption` parameter to set the custom plugins globally.
 
 In html scope:
-```
+```razor
 <TextEditor Id="text-editor" BlazeditorOption="option">
     <EditorContent>
         This example to customized plugins in toolbar.
@@ -54,7 +54,7 @@ In html scope:
 </TextEditor>
 ```
 And code scope:
-```
+``` razor
 @code
 {
     BlazeditorOption option = new BlazeditorOption
@@ -72,7 +72,7 @@ The inline editing mode is used for merging the editing and reading views of the
 
 set the `InlineMode` option to `true`. For example:
 
-```
+``` razor
 BlazeditorOption option = new BlazeditorOption
 {
     InlineMode = true
@@ -82,7 +82,7 @@ BlazeditorOption option = new BlazeditorOption
 ### Get and Set content
 This is the easy way to get content from text editor using `@ref` parameter with `TextEditor` property.
 
-```
+``` razor
 <TextEditor Id="text-editor" @ref="@textEditor">
     <EditorContent>
         <p>This example to get the content.</p>
@@ -98,7 +98,7 @@ This is the easy way to get content from text editor using `@ref` parameter with
 There are two ways to set the content to editor. 
 
 Using `<EditorContent>` inside `<TextEditor>` example: 
-```
+``` razor
 <TextEditor Id="text-editor">
     <EditorContent>
         <p>This example to set the content.</p>
@@ -107,7 +107,7 @@ Using `<EditorContent>` inside `<TextEditor>` example:
 ```
 Or using `@ref` parameter with `TextEditor` property.
 
-```
+``` razor
 <TextEditor Id="text-editor" @ref="@textEditor">
     <EditorContent>
         <p>This example to clear content by set empty.</p>
