@@ -2,9 +2,8 @@
 
 @using Blazeditor.TinyMCE
 
-
 <div>
-    <TextEditor Id="demo" @ref="@TextEditor" BlazeditorOption="textEditorOption">
+    <TextEditor Id="demo" @ref="@TextEditor" BlazeditorOption="textEditorOption" OnChangeCallBack="@OnChange">
         <EditorContent>
             This example shows you the blazor with TinyMCE.
         </EditorContent>
@@ -17,6 +16,11 @@
     <br />
     <p style="padding:50px;">
         @((MarkupString)data)
+    </p>
+    <hr />
+
+    <p>
+        @((MarkupString)onchangedData)
     </p>
 </div>
 <hr />
@@ -42,6 +46,7 @@
     private TextEditor TextEditor;
     private TextEditor InlineTextEditor;
     private string data = string.Empty;
+    private string onchangedData = string.Empty;
     private string inlineData = string.Empty;
 
     private BlazeditorOption textEditorOption = new BlazeditorOption
@@ -68,5 +73,12 @@
 
     public async Task ClearContent() => await TextEditor.SetContent(string.Empty);
 
+    async Task OnChange(string returnValue)
+    {
+        await Task.Run(() =>
+        {
+            onchangedData = returnValue;
+        });
+    }
 }
 
