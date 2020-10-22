@@ -14,20 +14,20 @@ else
     [Parameter]
     public RenderFragment EditorContent { get; set; }
 
-
     [Parameter]
     public string Id { get; set; } = Guid.NewGuid().ToString();
 
     [Parameter]
     public BlazeditorOption BlazeditorOption { get; set; } = new BlazeditorOption();
 
-    private ElementReference EditorElement;
+    [Parameter]
+    public EventCallback<string> OnChangeCallBack { get; set; }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-            await Interop.InitialTinyMCE(JSRuntime, Id, BlazeditorOption);
+            await Interop.InitialTinyMCE(JSRuntime, DotNetObjectReference.Create(this), Id, BlazeditorOption, nameof(OnChangeCallback));
         }
     }
 
@@ -39,5 +39,14 @@ else
     public async Task SetContent(string content)
     {
         await Interop.SetContent(JSRuntime, Id, content);
+    }
+
+    [JSInvokable] // This is required in order to JS be able to execute it
+    public async Task OnChangeCallback(string response)
+    {
+        if (OnChangeCallBack.HasDelegate)
+        {
+            await OnChangeCallBack.InvokeAsync(response);
+        }
     }
 }
