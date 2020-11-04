@@ -25,10 +25,7 @@ else
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender)
-        {
-            await Interop.InitialTinyMCE(JSRuntime, DotNetObjectReference.Create(this), Id, BlazeditorOption, nameof(OnChangeCallback));
-        }
+        await Interop.InitialTinyMCE(JSRuntime, DotNetObjectReference.Create(this), Id, BlazeditorOption, nameof(OnChangeCallback));
     }
 
     public async Task<string> GetContent()
