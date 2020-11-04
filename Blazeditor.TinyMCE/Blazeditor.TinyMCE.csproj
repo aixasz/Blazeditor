@@ -16,10 +16,10 @@
 	<IsPackable>true</IsPackable>
 	<PackageLicenseExpression></PackageLicenseExpression>
 	<PackageLicenseFile>LICENSE</PackageLicenseFile>
-	<AssemblyVersion>1.0.1.0</AssemblyVersion>
-	<FileVersion>1.0.1.0</FileVersion>
-	<PackageReleaseNotes></PackageReleaseNotes>
-	<Version>1.0.1</Version>
+	<AssemblyVersion>1.0.2.0</AssemblyVersion>
+	<FileVersion>1.0.2.0</FileVersion>
+	<PackageReleaseNotes>Fix editor not run after reload page</PackageReleaseNotes>
+	<Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
