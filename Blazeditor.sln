@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A95DCD49-1878-4225-BA3A-C51C31DB2F37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazeditor.TinyMCE", "Blazeditor.TinyMCE\Blazeditor.TinyMCE.csproj", "{F2E20D4B-7F5E-47E9-8171-DB1EFD5A2317}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazeditor.TinyMCE", "Blazeditor.TinyMCE\Blazeditor.TinyMCE.csproj", "{F2E20D4B-7F5E-47E9-8171-DB1EFD5A2317}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{FDF1438C-5376-42D3-8418-D70CF1AD0FB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerSideDemo", "samples\Blazeditor.TinyMCE.Demo\ServerSideDemo.csproj", "{16F4AAF3-FADA-4DF6-B5C7-BB82D3B82FBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerSideDemo", "samples\Blazeditor.TinyMCE.Demo\ServerSideDemo.csproj", "{16F4AAF3-FADA-4DF6-B5C7-BB82D3B82FBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

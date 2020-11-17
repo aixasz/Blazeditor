@@ -52,14 +52,16 @@
 
     private BlazeditorOption textEditorOption = new BlazeditorOption
     {
-        Toolbar = "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | outdent indent",
-        ShowMenuBar = true
+        Toolbar = "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | link",
+        ShowMenuBar = true,
+        PasteAsText = true,
+        PasteDataImage = true
     };
 
     private BlazeditorOption inlineOption = new BlazeditorOption
     {
         InlineMode = true,
-        Toolbar = "bold italic | alignleft aligncenter alignright alignjustify"
+        Toolbar = "bold italic | alignleft aligncenter alignright alignjustify | link"
     };
 
     public async Task GetContent()
