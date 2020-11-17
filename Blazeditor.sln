@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazeditor.TinyMCE", "Blaze
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{FDF1438C-5376-42D3-8418-D70CF1AD0FB7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerSideDemo", "samples\Blazeditor.TinyMCE.Demo\ServerSideDemo.csproj", "{16F4AAF3-FADA-4DF6-B5C7-BB82D3B82FBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerSideDemo", "samples\ServerSideDemo\ServerSideDemo.csproj", "{16F4AAF3-FADA-4DF6-B5C7-BB82D3B82FBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientSideDemo", "samples\ClientSideDemo\ClientSideDemo.csproj", "{14190B06-5945-447E-AF1E-4A5655D1382B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,10 @@ Global
 		{16F4AAF3-FADA-4DF6-B5C7-BB82D3B82FBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16F4AAF3-FADA-4DF6-B5C7-BB82D3B82FBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16F4AAF3-FADA-4DF6-B5C7-BB82D3B82FBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14190B06-5945-447E-AF1E-4A5655D1382B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14190B06-5945-447E-AF1E-4A5655D1382B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14190B06-5945-447E-AF1E-4A5655D1382B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14190B06-5945-447E-AF1E-4A5655D1382B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{F2E20D4B-7F5E-47E9-8171-DB1EFD5A2317} = {A95DCD49-1878-4225-BA3A-C51C31DB2F37}
 		{16F4AAF3-FADA-4DF6-B5C7-BB82D3B82FBC} = {FDF1438C-5376-42D3-8418-D70CF1AD0FB7}
+		{14190B06-5945-447E-AF1E-4A5655D1382B} = {FDF1438C-5376-42D3-8418-D70CF1AD0FB7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E2FE8BB6-1FFD-4464-947D-71927CC9957A}
