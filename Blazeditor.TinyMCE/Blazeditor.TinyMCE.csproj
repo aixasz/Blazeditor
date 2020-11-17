@@ -1,7 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RazorLangVersion>3.0</RazorLangVersion>
     <OutputType>Library</OutputType>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -13,13 +14,13 @@
     <PackageProjectUrl>https://github.com/aixasz/Blazeditor</PackageProjectUrl>
     <Copyright>Copyright 2020 (c) Nattapong Nunpan. All rights reserved.</Copyright>
     <Company>Blazeditor</Company>
-	<IsPackable>true</IsPackable>
-	<PackageLicenseExpression></PackageLicenseExpression>
-	<PackageLicenseFile>LICENSE</PackageLicenseFile>
-	<AssemblyVersion>1.0.2.0</AssemblyVersion>
-	<FileVersion>1.0.2.0</FileVersion>
-	<PackageReleaseNotes>Fix editor not run after reload page</PackageReleaseNotes>
-	<Version>1.0.2</Version>
+    <IsPackable>true</IsPackable>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
+    <PackageReleaseNotes>Fix editor not run after reload page</PackageReleaseNotes>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,6 +28,11 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.10" />
+    <PackageReference Include="Microsoft.JSInterop" Version="3.1.10" />
   </ItemGroup>
 
 </Project>
