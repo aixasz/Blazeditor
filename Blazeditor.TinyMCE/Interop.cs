@@ -1,12 +1,11 @@
 ﻿using Microsoft.JSInterop;
-using System;
 using System.Threading.Tasks;
 
 namespace Blazeditor.TinyMCE
 {
     public static class Interop
     {
-        internal static ValueTask<object> InitialTinyMCE
+        public static ValueTask<object> InitializeTextEditor
         (
             IJSRuntime jSRuntime,
             DotNetObjectReference<TextEditor> dotNetObjectReference,
@@ -17,7 +16,7 @@ namespace Blazeditor.TinyMCE
         {
             return jSRuntime.InvokeAsync<object>
             (
-                "callbackProxy",
+                "blazeditorCallbackProxy",
                 dotNetObjectReference,
                 "blazeditorInit",
                 idSelector,
@@ -25,16 +24,19 @@ namespace Blazeditor.TinyMCE
                 {
                     inlineMode = blazeditorOption.InlineMode,
                     toolbar = blazeditorOption.Toolbar,
-                    menubar = blazeditorOption.ShowMenuBar
+                    menubar = blazeditorOption.ShowMenuBar,
+                    plugins = blazeditorOption.Plugins,
+                    paste_data_images = blazeditorOption.PasteDataImage,
+                    paste_as_text = blazeditorOption.PasteAsText
                 },
                 onchangeCallback
             );
         }
 
-        internal static ValueTask<string> GetContent(IJSRuntime jSRuntime, string id)
+        public static ValueTask<string> GetContent(IJSRuntime jSRuntime, string id)
             => jSRuntime.InvokeAsync<string>("blazeditorGetContent", id);
 
-        internal static ValueTask<object> SetContent(IJSRuntime jSRuntime, string id, string data)
+        public static ValueTask<object> SetContent(IJSRuntime jSRuntime, string id, string data)
             => jSRuntime.InvokeAsync<object>("blazeditorSetContent", id, data);
     }
 }

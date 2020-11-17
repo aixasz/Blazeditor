@@ -1,5 +1,5 @@
 ﻿// Proxy function that serves as middlemen
-window.callbackProxy = function (dotNetInstance, callMethod, id, option, callbackMethod) {
+window.blazeditorCallbackProxy = function (dotNetInstance, callMethod, id, option, callbackMethod) {
     // Execute function that will do the actual job
     window[callMethod](id, option, function (result) {
         // Invoke the C# callback method passing the result as parameter
@@ -25,23 +25,25 @@ window.blazeditorInit = function (id, option, callback) {
         });
     }
 
+    var config = {
+        selector: 'textarea#' + id,
+        inline: false,
+        plugins: option.plugins,
+        toolbar: option.toolbar,
+        setup: setup,
+        menubar: option.menubar,
+        default_link_target: '_blank',
+        paste_data_images: option.paste_data_images,
+        paste_as_text: option.paste_as_text,
+        smart_paste: false,
+    };
 
     if (option.inlineMode) {
-        tinymce.init({
-            selector: '#' + id,
-            inline: true,
-            toolbar: option.toolbar,
-            setup: setup,
-            menubar: option.menubar
-        });
-    } else {
-        tinymce.init({
-            selector: 'textarea#' + id,
-            toolbar: option.toolbar,
-            setup: setup,
-            menubar: option.menubar
-        });
-    }
+        config.selector = '#' + id;
+        config.inline = true;        
+    } 
+
+    tinymce.init(config);
 }
 
 window.blazeditorSetContent = function (id, data) {
