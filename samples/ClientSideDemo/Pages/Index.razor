@@ -1,0 +1,66 @@
+﻿@page "/"
+
+<TextEditor Id="demo" @ref="@TextEditor" BlazeditorOption="textEditorOption" OnChangeCallBack="@OnChange">
+    <EditorContent>
+        @((MarkupString)initialText)
+    </EditorContent>
+</TextEditor>
+
+<br />
+
+<button @onclick="GetContent">Get content</button>
+<button @onclick="ClearContent">Clear</button>
+<br />
+<p style="padding:50px;">
+    @((MarkupString)data)
+</p>
+<hr />
+
+<p>
+    @((MarkupString)onchangedData)
+</p>
+
+@code
+{
+    const string initialText = "<p>This example shows you the blazor with TinyMCE.</p>";
+    private TextEditor TextEditor;
+    private TextEditor InlineTextEditor;
+    private string data = string.Empty;
+    private string onchangedData = string.Empty;
+    private string inlineData = string.Empty;
+
+    private BlazeditorOption textEditorOption = new BlazeditorOption
+    {
+        Toolbar = "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | link",
+        ShowMenuBar = true,
+        PasteAsText = true,
+        PasteDataImage = true
+    };
+
+    private BlazeditorOption inlineOption = new BlazeditorOption
+    {
+        InlineMode = true,
+        Toolbar = "bold italic | alignleft aligncenter alignright alignjustify | link"
+    };
+
+    public async Task GetContent()
+    {
+        data = await TextEditor.GetContent();
+    }
+
+    public async Task GetInlineContent()
+    {
+        inlineData = await InlineTextEditor.GetContent();
+    }
+
+    public async Task ClearContent() => await TextEditor.SetContent(string.Empty);
+
+    async Task OnChange(string returnValue)
+    {
+        await Task.Run(() =>
+        {
+            onchangedData = returnValue;
+        });
+    }
+}
+
