@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RazorLangVersion>3.0</RazorLangVersion>
     <OutputType>Library</OutputType>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -12,7 +11,7 @@
     <PackageTags>Blazor TinyMCE Editor Text Component</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageProjectUrl>https://github.com/aixasz/Blazeditor</PackageProjectUrl>
-    <Copyright>Copyright 2020 (c) Nattapong Nunpan. All rights reserved.</Copyright>
+    <Copyright>Copyright 2021 (c) Nattapong Nunpan. All rights reserved.</Copyright>
     <Company>Blazeditor</Company>
     <IsPackable>true</IsPackable>
     <PackageLicenseExpression></PackageLicenseExpression>
