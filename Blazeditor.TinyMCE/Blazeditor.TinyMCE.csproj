@@ -20,6 +20,7 @@
     <FileVersion>1.1.0.0</FileVersion>
     <PackageReleaseNotes>Blazeditor for .NET 5</PackageReleaseNotes>
     <Version>1.1.0</Version>
+    <PackageVersion>1.1.0</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>

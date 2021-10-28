@@ -20,7 +20,10 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
-    - name: Publish to NuGet
+      
+      # Publish
+    - name: publish on version change
+      id: publish_nuget
       uses: brandedoutcast/publish-nuget@v2
       with:
         # Filepath of the project to be packaged, relative to root of repository
