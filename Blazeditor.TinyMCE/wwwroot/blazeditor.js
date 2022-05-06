@@ -28,15 +28,16 @@ window.blazeditorInit = function (id, option, callback) {
     var config = {
         selector: 'textarea#' + id,
         inline: false,
-        plugins: option.plugins,
-        toolbar: option.toolbar,
         setup: setup,
-        menubar: option.menubar,
         default_link_target: '_blank',
-        paste_data_images: option.paste_data_images,
-        paste_as_text: option.paste_as_text,
         smart_paste: false,
     };
+    
+    for (var key in option) {
+        if (option.hasOwnProperty(key)) {
+            config[key] = option[key];
+        }
+    }
 
     if (option.inlineMode) {
         config.selector = '#' + id;
