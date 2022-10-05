@@ -11,16 +11,16 @@
     <PackageTags>Blazor TinyMCE Editor Text Component</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageProjectUrl>https://github.com/aixasz/Blazeditor</PackageProjectUrl>
-    <Copyright>Copyright 2021 (c) Nattapong Nunpan. All rights reserved.</Copyright>
+    <Copyright>Copyright 2022 (c) Nattapong Nunpan. All rights reserved.</Copyright>
     <Company>Blazeditor</Company>
     <IsPackable>true</IsPackable>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
-    <FileVersion>1.1.0.0</FileVersion>
-    <PackageReleaseNotes>Blazeditor for .NET 5</PackageReleaseNotes>
-    <Version>1.1.0</Version>
-    <PackageVersion>1.1.0</PackageVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
+    <PackageReleaseNotes>Blazeditor for .NET 6</PackageReleaseNotes>
+    <Version>1.2.0</Version>
+    <PackageVersion>1.2.0</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
