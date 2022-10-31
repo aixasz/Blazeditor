@@ -16,23 +16,20 @@
     <IsPackable>true</IsPackable>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <AssemblyVersion>1.2.1</AssemblyVersion>
-    <FileVersion>1.2.1</FileVersion>
+    <AssemblyVersion>1.2.2</AssemblyVersion>
+    <FileVersion>1.2.2</FileVersion>
     <PackageReleaseNotes>Blazeditor for .NET 6</PackageReleaseNotes>
-    <Version>1.2.1</Version>
-    <PackageVersion>1.2.1</PackageVersion>
-    <ApplicationIcon>logo.ico</ApplicationIcon>
+    <Version>1.2.2</Version>
+    <PackageVersion>1.2.2</PackageVersion>
+    <PackageIcon>logo.png</PackageIcon>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Content Include="logo.ico" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\LICENSE">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+    <None Include="images\icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
