@@ -21,7 +21,7 @@
     <PackageReleaseNotes>Blazeditor for .NET 6</PackageReleaseNotes>
     <Version>1.2.2</Version>
     <PackageVersion>1.2.2</PackageVersion>
-    <PackageIcon>logo.png</PackageIcon>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,12 +29,15 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <None Include="images\icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.10" />
     <PackageReference Include="Microsoft.JSInterop" Version="6.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
