@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <OutputType>Library</OutputType>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -16,11 +16,11 @@
     <IsPackable>true</IsPackable>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <AssemblyVersion>1.2.2</AssemblyVersion>
-    <FileVersion>1.2.2</FileVersion>
+    <AssemblyVersion>1.3.0</AssemblyVersion>
+    <FileVersion>1.3.0</FileVersion>
     <PackageReleaseNotes>Blazeditor for .NET 6</PackageReleaseNotes>
-    <Version>1.2.2</Version>
-    <PackageVersion>1.2.2</PackageVersion>
+    <Version>1.3.0</Version>
+    <PackageVersion>1.3.0</PackageVersion>
     <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
 
@@ -33,8 +33,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.10" />
-    <PackageReference Include="Microsoft.JSInterop" Version="6.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="8.*" />
+    <PackageReference Include="Microsoft.JSInterop" Version="8.*" />
   </ItemGroup>
 
 </Project>
